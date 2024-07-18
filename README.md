@@ -1,8 +1,7 @@
 <p align="center">
-    <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://github.com/LiterateInk/Turbawself/blob/f22231e88ef3abc66da9c258132428cda75b68a5/.github/Turbawself%20Dark.png">
-        <img alt="WebRestaw Logo" src="https://github.com/LiterateInk/Turbawself/blob/f22231e88ef3abc66da9c258132428cda75b68a5/.github/Turbawself%20Light.png">
-    </picture>
+  <picture>
+    <img alt="Turbawself Banner" src="">
+  </picture>
 </p>
 
 [Turboself](https://www.turboself.fr/) is an application mainly used in schools to manage school catering. It enables students and parents to reserve and pay for meals, consult menus and track consumption. Turboself facilitates canteen organization and ensures efficient management of school meals.
