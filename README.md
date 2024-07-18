@@ -1,6 +1,6 @@
 <p align="center">
   <picture>
-    <img alt="Turbawself Banner" src="">
+    <img alt="Turbawself Banner" src="https://github.com/LiterateInk/Turbawself/blob/ec2884b4fcfe414d73c73a1b5ad14dddd1a1b6a0/.github/assets/readme.svg">
   </picture>
 </p>
 
