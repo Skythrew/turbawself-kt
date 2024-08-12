@@ -16,6 +16,11 @@ Since we're implementing this library in different programming languages, we hav
 | :---:  | :---: | :---: | :---: |
 | Kotlin | C#    |       |       |
 
+## Acknowledgements
+
+- [`turboself-api`](https://github.com/raphckrman/turboself-api)
+- [Tom THERET](https://github.com/tom-theret) for helping in our experiments against Turboself's API
+
 ## License
 
 This project is licensed under the GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details.
