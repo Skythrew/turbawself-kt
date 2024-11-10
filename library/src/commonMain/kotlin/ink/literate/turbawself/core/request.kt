@@ -8,6 +8,7 @@ import io.ktor.http.*
 import kotlinx.datetime.Clock
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 
 class Request(version: Int, path: String) {
@@ -63,7 +64,7 @@ class Request(version: Int, path: String) {
         return this
     }
 
-    suspend fun send(client: HttpClient = HttpClient()): JsonObject {
+    suspend fun send(client: HttpClient = HttpClient()): JsonElement {
         val httpMethod = this.method
         val httpHeaders = this.headers
         val httpContent = this.content

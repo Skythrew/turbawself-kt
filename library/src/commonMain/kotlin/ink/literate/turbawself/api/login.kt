@@ -17,7 +17,7 @@ suspend fun login(auth: Authentication): Session {
         }
     )
 
-    val content = request.send(auth.client)
+    val content = request.send(auth.client).jsonObject
 
     auth.accessToken = content["access_token"]!!.jsonPrimitive.content
     val tokenData = auth.accessToken!!.split(".")[1]
