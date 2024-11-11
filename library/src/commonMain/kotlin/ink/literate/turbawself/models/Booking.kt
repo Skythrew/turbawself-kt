@@ -5,7 +5,6 @@ import kotlinx.datetime.LocalDateTime
 data class Booking(
     val id: String,
     val week: Short,
-    val hostID: Long,
     val from: LocalDateTime,
     val to: LocalDateTime,
     val terminal: Terminal,
