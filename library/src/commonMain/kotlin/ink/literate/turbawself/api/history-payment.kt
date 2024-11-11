@@ -7,10 +7,14 @@ import ink.literate.turbawself.models.HistoryPayment
 import ink.literate.turbawself.models.Session
 import kotlinx.serialization.json.jsonObject
 
-suspend fun historyPayment(auth: Authentication, session: Session, paymentId: Long): HistoryPayment {
-    val request = Request(2, "hotes/${session.hostID}/historiques/${paymentId}")
-    request.useAuthentication(auth)
-    val content = request.send(auth.client)
+suspend fun historyPayment(
+    auth: Authentication,
+    session: Session,
+    paymentId: Long
+): HistoryPayment {
+  val request = Request(2, "hotes/${session.hostID}/historiques/${paymentId}")
+  request.useAuthentication(auth)
+  val content = request.send(auth.client)
 
-    return decodeHistoryPayment(content.jsonObject)
+  return decodeHistoryPayment(content.jsonObject)
 }

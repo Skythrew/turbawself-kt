@@ -8,10 +8,10 @@ import ink.literate.turbawself.models.Session
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 
-suspend fun history (auth: Authentication, session: Session): List<HistoryPayment> {
-    val request = Request(1, "historiques/hotes/${session.hostID}")
-    request.useAuthentication(auth)
-    val content = request.send(auth.client)
+suspend fun history(auth: Authentication, session: Session): List<HistoryPayment> {
+  val request = Request(1, "historiques/hotes/${session.hostID}")
+  request.useAuthentication(auth)
+  val content = request.send(auth.client)
 
-    return content.jsonArray.map { decodeHistoryPayment(it.jsonObject) }
+  return content.jsonArray.map { decodeHistoryPayment(it.jsonObject) }
 }

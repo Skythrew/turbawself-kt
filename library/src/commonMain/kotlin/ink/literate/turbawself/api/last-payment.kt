@@ -8,13 +8,12 @@ import ink.literate.turbawself.models.Session
 import kotlinx.serialization.json.*
 
 suspend fun lastPayment(auth: Authentication, session: Session): Payment? {
-    val request = Request(2, "hotes/${session.hostID}/paiements-payline/latest")
-    request.useAuthentication(auth)
+  val request = Request(2, "hotes/${session.hostID}/paiements-payline/latest")
+  request.useAuthentication(auth)
 
-    val content = request.send(auth.client)
+  val content = request.send(auth.client)
 
-    if (content.jsonPrimitive.contentOrNull == null)
-        return null
+  if (content.jsonPrimitive.contentOrNull == null) return null
 
-    return decodePayment(content.jsonObject)
+  return decodePayment(content.jsonObject)
 }

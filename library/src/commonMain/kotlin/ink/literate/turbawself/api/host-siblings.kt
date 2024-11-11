@@ -8,10 +8,10 @@ import ink.literate.turbawself.models.Session
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 
-suspend fun hostSiblings (auth: Authentication, session: Session): List<Host> {
-    val request = Request(1, "hotes/${session.hostID}/freres-soeurs")
-    request.useAuthentication(auth)
-    val content = request.send(auth.client)
+suspend fun hostSiblings(auth: Authentication, session: Session): List<Host> {
+  val request = Request(1, "hotes/${session.hostID}/freres-soeurs")
+  request.useAuthentication(auth)
+  val content = request.send(auth.client)
 
-    return content.jsonArray.map { decodeHost(it.jsonObject) }
+  return content.jsonArray.map { decodeHost(it.jsonObject) }
 }

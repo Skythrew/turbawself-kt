@@ -9,17 +9,17 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 
 suspend fun establishmentBy2P5(auth: Authentication, code2p5: Long): Establishment {
-    val request = Request(2, "etablissements?code2p5=$code2p5")
-    request.useAuthentication(auth)
+  val request = Request(2, "etablissements?code2p5=$code2p5")
+  request.useAuthentication(auth)
 
-    val content = request.send(auth.client)
+  val content = request.send(auth.client)
 
-    return decodeEstablishment(content.jsonArray[0].jsonObject)
+  return decodeEstablishment(content.jsonArray[0].jsonObject)
 }
 
 suspend fun establishmentByID(id: Long, client: HttpClient = HttpClient()): Establishment {
-    val request = Request(1, "etablissements/etabId/$id")
-    val content = request.send(client)
+  val request = Request(1, "etablissements/etabId/$id")
+  val content = request.send(client)
 
-    return decodeEstablishment(content.jsonObject)
+  return decodeEstablishment(content.jsonObject)
 }

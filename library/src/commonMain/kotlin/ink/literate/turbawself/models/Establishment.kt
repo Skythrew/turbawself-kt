@@ -35,9 +35,7 @@ data class Establishment(
     val turboselfID: Long,
     val currencySymbol: String,
     val hideHistory: Boolean,
-
     val reservations: List<Reservation>,
-
     val uai: String,
     val disabled: Boolean,
     /** MAC address of the establishment's Turboself server. */
@@ -45,10 +43,8 @@ data class Establishment(
     val maximumTransactionAllowed: Double,
     val totalReservations: Long,
     val welcomeMessage: String? = null,
-
     val minimumMeals: Long,
     val minimumClaim: Double,
     val minimumCredit: Double,
-
     val permissions: Permissions
 )

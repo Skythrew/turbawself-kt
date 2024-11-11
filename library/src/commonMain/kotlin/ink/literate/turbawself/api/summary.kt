@@ -7,10 +7,10 @@ import ink.literate.turbawself.models.Session
 import ink.literate.turbawself.models.Summary
 import kotlinx.serialization.json.jsonObject
 
-suspend fun summary (auth: Authentication, session: Session): Summary {
-    val request = Request(2, "hotes/${session.hostID}/accueil")
-    request.useAuthentication(auth)
-    val content = request.send(auth.client)
+suspend fun summary(auth: Authentication, session: Session): Summary {
+  val request = Request(2, "hotes/${session.hostID}/accueil")
+  request.useAuthentication(auth)
+  val content = request.send(auth.client)
 
-    return decodeSummary(content.jsonObject)
+  return decodeSummary(content.jsonObject)
 }
