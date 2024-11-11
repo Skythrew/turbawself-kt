@@ -5,5 +5,5 @@ data class Terminal(
     val originalID: Long,
     val code: Long,
     val name: String,
-    val price: List<TerminalPrice>
+    val prices: List<TerminalPrice>
 )
