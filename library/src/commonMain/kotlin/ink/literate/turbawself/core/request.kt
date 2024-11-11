@@ -13,7 +13,7 @@ import kotlinx.serialization.json.JsonObject
 
 class Request(version: Int, path: String) {
     val url: Url
-    var headers: MutableMap<String, String> = mutableMapOf()
+    var headers: MutableMap<String, String> = mutableMapOf("User-Agent" to "@literateink/turbawself")
     var content = ""
     var method: HttpMethod = HttpMethod.Get
 
@@ -24,11 +24,13 @@ class Request(version: Int, path: String) {
     fun setJSON(json: JsonObject): Request {
         this.method = HttpMethod.Post
         this.content = Json.encodeToString(json)
-        this.headers = mutableMapOf(
-            "Content-Type" to "application/json"
-        )
+        this.headers["Content-Type"] = "application/json"
 
         return this
+    }
+
+    fun setHttpMethod(httpMethod: HttpMethod) {
+        this.method = httpMethod
     }
 
     private suspend fun refresh (auth: Authentication) {
