@@ -5,7 +5,6 @@ import kotlinx.datetime.LocalDateTime
 data class HistoryPayment(
     val id: Long,
     val date: LocalDateTime,
-    val details: String,
-    val amount: Int,
-    val credit: Int
+    val label: String,
+    val amount: Int
 )
