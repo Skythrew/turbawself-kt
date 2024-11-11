@@ -13,5 +13,8 @@ data class Payment(
     val status: PaymentStatus,
     val transactionID: String? = null,
     val token: String,
-    val message: String
+    val message: String,
+    val url: String? = null,
+    val cancelURL: String,
+    val returnURL: String
 )
