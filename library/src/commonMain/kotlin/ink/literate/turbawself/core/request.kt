@@ -21,7 +21,7 @@ class Request(version: Int, path: String) {
         this.url = Url("https://api-rest-prod.incb.fr/api/v${version}/${path}")
     }
 
-    fun setJSON(json: JsonObject): Request {
+    fun setJSON(json: JsonElement): Request {
         this.method = HttpMethod.Post
         this.content = Json.encodeToString(json)
         this.headers["Content-Type"] = "application/json"
