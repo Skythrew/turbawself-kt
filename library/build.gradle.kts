@@ -10,7 +10,8 @@ plugins {
 val libraryName = "Turbawself"
 val idLibraryName = libraryName.lowercase()
 
-group = "ink.literate"
+val groupName = "ink.literate"
+group = groupName
 
 version = "1.0.0"
 
@@ -39,7 +40,7 @@ kotlin {
 }
 
 android {
-  namespace = "org.jetbrains.kotlinx.multiplatform.library.template"
+  namespace = groupName
   compileSdk = libs.versions.android.compileSdk.get().toInt()
   defaultConfig { minSdk = libs.versions.android.minSdk.get().toInt() }
 }
