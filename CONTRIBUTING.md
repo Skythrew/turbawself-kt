@@ -1,13 +1,12 @@
-# Contributing to Turbawself
-
-You might refer to our [global contribution guidelines](https://github.com/LiterateInk/.github/blob/main/CONTRIBUTING.md) first.
-
-If you want to contribute to the development, please see the section below.
+# Contributing
 
 ## Development
 
-Please refer to the `CONTRIBUTING.md` of the implementation you want to work on for more information.
+To start developing, clone the repository and install the dependencies.
 
-| [JS/TS](https://github.com/LiterateInk/Turbawself/blob/js/CONTRIBUTING.md) | Rust | Python | Swift |
-| :---:  | :---: | :---: | :---: |
-| [Kotlin](https://github.com/LiterateInk/Turbawself/tree/kotlin) | C#    |       |       |
+```bash
+# Clone the repository.
+git clone https://github.com/LiterateInk/Turbawself && cd Turbawself
+# Switch to the Kotlin implementation branch.
+git checkout kotlin
+```

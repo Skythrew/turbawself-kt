@@ -10,6 +10,7 @@ authors:
     email: contact@literate.ink
 repository-code: 'https://github.com/LiterateInk/Turbawself'
 url: 'https://docs.literate.ink/turbawself'
+repository-artifact: 'https://central.sonatype.com/artifact/ink.literate/turbawself'
 abstract: >-
   An awmazing API wrapper for Turboself.
 keywords:
