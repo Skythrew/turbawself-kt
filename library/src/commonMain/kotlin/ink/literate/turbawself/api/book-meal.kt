@@ -25,7 +25,7 @@ suspend fun bookMeal(
         putJsonObject("web") { put("id", bookId) }
         put("hasHoteResaSoirActive", bookEvening)
       })
-  request.setHttpMethod(HttpMethod.Put)
+  request.setHttpMethod(HttpMethod.Post)
 
   val content = request.send(auth.client)
   val bookingData = content.jsonObject
